@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 2rem;
+    background-color: var(--main-bg);
   }
   .img {
     width: 100%;
@@ -27,7 +28,7 @@
     padding-bottom: 40px;
   }
   .titleContainer h1 {
-    color: var(--color-secondary);
+    color: var( --main-bg-color-secondary);
     font-size: 30px;
     font-weight: 600;
   }
@@ -40,7 +41,7 @@
   .titleContainer p {
     font-size: 15px;
     font-weight: 500;
-    color: #c0c0c0;
+    color: var(--main-color-text-200);
   }
   .loginInnerContent {
     padding-top: 5px;
@@ -78,10 +79,10 @@
     border-radius: 50px;
     outline: none;
     border: none;
-    background-color: var(--color-primary);
+    background-color: var( --main-bg-color-primary);
     background-size: 200%;
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--main-color-primary-contrast);
     font-family: "poppins", sans-serif;
     margin: 1rem 0;
     cursor: pointer;
@@ -91,7 +92,7 @@
     background-position: right;
   }
   .err{
-    color: red;
+    color: var(--main-color-error);
     font-size: 15px;
   }
   @media screen and (max-width: 1050px) {
