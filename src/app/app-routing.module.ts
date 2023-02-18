@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SessionGuard } from '@private/shared/guards/n.guard';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
     path: 'panel',
     loadChildren: () =>
       import('./modules/private/private.module').then((m) => m.PrivateModule),
-    canActivate: [],
+    canActivate: [SessionGuard],
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

@@ -5,9 +5,9 @@
     <div class=loginContent>
       <form class=form onSubmit=onSetForm>
         <div class=titleContainer>
-          <h1>Ingreso</h1>
+          <h1>Quipix Prueba Frontend</h1>
           <h2>Hola!</h2>
-          <p> respMessage </p>
+          <p>Ingresa tus datos para iniciar...</p>
         </div>
         <div class=loginInnerContent>
           <div class=inputDiv>
@@ -24,11 +24,10 @@
               id="pswrd"
               type="password"
               class=input
-              value=passInput
             />
           </div>
         </div>
-            <p class=err >errMessage</p>
+            <p *ngIf="error" class=err >errMessage</p>
         <input type="submit" class=btn value="Login" />
       </form>
     </div>

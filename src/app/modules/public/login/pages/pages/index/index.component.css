@@ -1,13 +1,14 @@
 .container {
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     padding: 0 2rem;
     background-color: var(--main-bg);
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .img {
-    width: 100%;
+    width: 40%;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
@@ -15,13 +16,18 @@
   }
   .img img {
     width: 500px;
+    border-radius: 7px;
   }
   
   .loginContent {
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  .loginContent > form {
+    width: 100%;
   }
   .titleContainer {
     text-align: left;
@@ -57,7 +63,7 @@
     grid-template-columns: 100%;
     margin: 5px;
     padding: 5px 0;
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 2px solid var(--main-color-text-200);
   }
   .loginContent{
     margin-top: 0;
@@ -70,7 +76,7 @@
     background: none;
     padding: 0.5rem 0.7rem;
     font-size: 15px;
-    color: #555; 
+    color: var(--main-color-text-200); 
   }
   .btn {
     display: block;
@@ -79,7 +85,7 @@
     border-radius: 50px;
     outline: none;
     border: none;
-    background-color: var( --main-bg-color-primary);
+    background-color: var( --main-color-primary );
     background-size: 200%;
     font-size: 1.2rem;
     color: var(--main-color-primary-contrast);
@@ -108,6 +114,7 @@
       width: 290px;
     }
     .loginContent h2 {
+ 
       font-size: 2.4rem;
       margin: 8px 0;
     }
@@ -124,6 +131,7 @@
     }
     .loginContent {
       justify-content: center;
+      width: 90%;
     }
   }
   

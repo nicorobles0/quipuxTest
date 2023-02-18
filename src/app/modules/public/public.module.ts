@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PublicRoutingModule } from './public-routing.module';
 import { IndexComponent } from './login/pages/pages/index/index.component';
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,6 +11,7 @@ import { IndexComponent } from './login/pages/pages/index/index.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PublicRoutingModule
   ]
 })
