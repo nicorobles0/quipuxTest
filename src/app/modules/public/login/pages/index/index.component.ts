@@ -21,8 +21,8 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this._formBuilder.group({
-      email: ['user@quipux.com', [Validators.required, Validators.email]],
-      password: ['12345', [Validators.required, Validators.minLength(5)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(5)]],
     });
   }
 
