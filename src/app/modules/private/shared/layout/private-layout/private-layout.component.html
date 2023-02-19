@@ -8,27 +8,23 @@
       <div class="sidebar-logo">
         <a href="https://ng.ant.design/" target="_blank">
           <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-          <h1>Ant Design Of Angular</h1>
+          <h1>Quipux Frontend Test</h1>
         </a>
       </div>
       <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-        <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+        <li nz-submenu nzOpen nzTitle="Mi musica" nzIcon="customer-service">
           <ul>
             <li nz-menu-item nzMatchRouter>
-              <a routerLink="/welcome">Welcome</a>
+              <span nz-icon nzType="home" nzTheme="outline" class="menu-icon"></span>
+              <a routerLink="/app/inicio">Inicio</a>
             </li>
             <li nz-menu-item nzMatchRouter>
-              <a>Monitor</a>
+              <span nz-icon nzType="search" nzTheme="outline" class="menu-icon"></span>
+              <a routerLink="/app/buscar">Buscar</a>
             </li>
             <li nz-menu-item nzMatchRouter>
-              <a>Workplace</a>
-            </li>
-          </ul>
-        </li>
-        <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
-          <ul>
-            <li nz-menu-item nzMatchRouter>
-              <a>Basic Form</a>
+              <span nz-icon nzType="like" nzTheme="outline" class="menu-icon"></span>
+              <a routerLink="/app/favoritas">Favoritas</a>
             </li>
           </ul>
         </li>
@@ -37,12 +33,18 @@
     <nz-layout>
       <nz-header>
         <div class="app-header">
-          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <button (click)="isCollapsed = !isCollapsed" title="Colapsar Menu">
               <span class="trigger"
                  nz-icon
                  [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
               ></span>
-          </span>
+          </button>
+          <button title="Cerrar Sesion">
+            <span class="trigger"
+               nz-icon
+               nzType="logout"
+            ></span>
+          </button>
         </div>
       </nz-header>
       <nz-content>

@@ -1,15 +1,14 @@
 /* Varaibles */
 :root {
     --main-bg: #f4f4f4;
-    --main-color-primary: #007cff;
-    --main-color-secondary: #a9cbff;
+    --main-color-primary: #001628;
+    --main-color-secondary: #001628;
     --main-color-primary-contrast: #fff;
-
-
     --main-color-text-50: #000;
     --main-color-text-100: #333333;
     --main-color-text-200: #505050;
     --main-color-text-300: #808080;
+    --main-color-text-900: #fff;
 
     --main-color-error: red;
 

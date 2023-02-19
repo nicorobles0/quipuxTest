@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PrivateLayoutComponent } from './shared/layoud/private-layout/private-layout.component';
+import { PrivateLayoutComponent } from './shared/layout/private-layout/private-layout.component';
 
 const routes: Routes = [
   {
@@ -9,12 +9,11 @@ const routes: Routes = [
     component: PrivateLayoutComponent,
     children: [
       {
-        path: 'inicio',
-        loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+        path: '',
+        loadChildren: () => import('./my-music/my-music.module').then((m) => m.MyMusicModule),
       }
     ]
-  }
-
+  },
 ]
 
 @NgModule({

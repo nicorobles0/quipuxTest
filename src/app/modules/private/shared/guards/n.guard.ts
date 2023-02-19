@@ -13,7 +13,7 @@ export class SessionGuard implements CanActivate, CanActivateChild {
     const fakeJwt: string = localStorage.getItem('fakeJwt') || '';
     const validSession: boolean = fakeJwt === '03efebfa-afd7-11ed-afa1-0242ac120002' ? true : false;
     if(!validSession)
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/login');
     return validSession;
   }
 
@@ -21,7 +21,7 @@ export class SessionGuard implements CanActivate, CanActivateChild {
     const fakeJwt: string = localStorage.getItem('fakeJwt') || '';
     const validSession: boolean = fakeJwt === '03efebfa-afd7-11ed-afa1-0242ac120002' ? true : false;
     if(!validSession)
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/login');
     return validSession;
   }
 }

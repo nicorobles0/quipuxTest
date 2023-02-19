@@ -4,17 +4,17 @@ import { SessionGuard } from '@private/shared/guards/n.guard';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     loadChildren: () =>
       import('./modules/public/public.module').then((m) => m.PublicModule),
   },
   {
-    path: 'panel',
+    path: 'app',
     loadChildren: () =>
       import('./modules/private/private.module').then((m) => m.PrivateModule),
     canActivate: [SessionGuard],
   },
-  { path: '**', pathMatch: 'full', redirectTo: '' },
+  { path: '**', pathMatch: 'full', redirectTo: 'app' },
 ];
 
 @NgModule({

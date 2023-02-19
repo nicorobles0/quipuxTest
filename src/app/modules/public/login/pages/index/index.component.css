@@ -92,10 +92,11 @@
     font-family: "poppins", sans-serif;
     margin: 1rem 0;
     cursor: pointer;
-    transition: 0.5s;
+    transition: all 0.4s ease-out;
   }
   .btn:hover {
     background-position: right;
+    background-color: var( --main-color-secondary );
   }
   .err{
     color: var(--main-color-error);

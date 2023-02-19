@@ -22,7 +22,7 @@
     "types": ["node","jest"],
     "paths": {
       "@private/*": ["src/app/modules/private/*"],
-
+      "@environments": ["src/environments/*"]
     },
     "lib": [
       "ES2022",
