@@ -37,7 +37,8 @@ export class IndexComponent implements OnInit {
     this.loginS.login(loginData).subscribe({
       next: (res) => {
         if (res) {
-          this.router.navigateByUrl('/app/mimusica')
+          this.isFormError = false;
+          this.router.navigateByUrl('/app/inicio')
         } else {
           this.isFormError = true;
           this.errorMessage = 'Usuario o contraseña incorrecta';

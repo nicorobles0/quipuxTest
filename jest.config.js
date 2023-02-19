@@ -11,6 +11,7 @@ const config = {
     "<rootDir>/e2e/(?:.+?)",
     "<rootDir>/src/environments/(?:.+?)",
     "<rootDir>/src/polyfills.ts",
+    "<rootDir>/src/app/modules/private/(?:.+?)",
     "<rootDir>/src/app/shared/(?:.+?)",
     "<rootDir>/src/assets/(?:.+?)",
     "<rootDir>/src/main.server.ts",
