@@ -7,6 +7,7 @@ import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.co
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { SongCardComponent } from './components/song-card/song-card.component';
 import { SongIframePipe, SongPipe } from './pipes/song.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SongIframePipe, SongPipe } from './pipes/song.pipe';
   imports: [
     CommonModule,
     MyMusicRoutingModule,
+    FormsModule,
     SongPipe,
     SongIframePipe
   ]
