@@ -9,22 +9,18 @@ import { SoundsService } from '@private/my-music/services/sounds.service';
   templateUrl: './search-page.component.html',
   styleUrls: ['./search-page.component.css']
 })
-export class SearchPageComponent implements OnInit {
+export class SearchPageComponent{
   top5Songs: SongInterface[] = [];
-  searchTerm: string = '';
+  isLoading: boolean = false;
 
   constructor(private soundS: SoundsService){}
 
-  ngOnInit(){
-    
-  }
-
-  searchSongs( term: NgForm ){
-    if(term.invalid){
-      return;
-    }
-    this.soundS.searchSongs(this.searchTerm).subscribe({
-      next: (resp: any) => { this.top5Songs = resp.slice(0,5) }
+  searchSongs( term: string ){
+    this.isLoading = true;
+    this.top5Songs = [];
+    this.soundS.searchSongs(term).subscribe({
+      next: (resp: any) => { this.top5Songs = resp.slice(0,5); this.isLoading = false; },
+      error: () => { this.isLoading = false; }
     })
   }
 }

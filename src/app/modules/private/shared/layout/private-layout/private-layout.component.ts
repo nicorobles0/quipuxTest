@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SessionService } from '@private/shared/services/session.service';
 
 @Component({
   selector: 'app-private-layout',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
 })
 export class PrivateLayoutComponent {
   isCollapsed = false;
+
+  constructor(private sessionS: SessionService){}
+
+  exit(){
+    this.sessionS.closeSession()
+  }
 
 }

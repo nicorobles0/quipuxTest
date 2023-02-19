@@ -22,10 +22,10 @@
               <span nz-icon nzType="search" nzTheme="outline" class="menu-icon"></span>
               <a routerLink="/app/buscar">Buscar</a>
             </li>
-            <li nz-menu-item nzMatchRouter>
+            <!-- <li nz-menu-item nzMatchRouter>
               <span nz-icon nzType="like" nzTheme="outline" class="menu-icon"></span>
               <a routerLink="/app/favoritas">Favoritas</a>
-            </li>
+            </li> -->
           </ul>
         </li>
       </ul>
@@ -39,7 +39,7 @@
                  [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
               ></span>
           </button>
-          <button title="Cerrar Sesion">
+          <button title="Cerrar Sesion" (click)="exit()">
             <span class="trigger"
                nz-icon
                nzType="logout"

@@ -8,6 +8,9 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { SongCardComponent } from './components/song-card/song-card.component';
 import { SongIframePipe, SongPipe } from './pipes/song.pipe';
 import { FormsModule } from '@angular/forms';
+import { SearcherComponent } from './components/searcher/searcher.component';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { IconsProviderModule } from 'src/app/icons-provider.module';
 
 @NgModule({
   declarations: [
@@ -15,13 +18,16 @@ import { FormsModule } from '@angular/forms';
     FavoritesPageComponent,
     SearchPageComponent,
     SongCardComponent,
+    SearcherComponent,
   ],
   imports: [
     CommonModule,
     MyMusicRoutingModule,
+    IconsProviderModule,
     FormsModule,
     SongPipe,
-    SongIframePipe
+    SongIframePipe,
+    NzSpinModule
   ]
 })
 export class MyMusicModule { }

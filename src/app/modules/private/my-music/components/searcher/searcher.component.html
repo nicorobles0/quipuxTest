@@ -1,0 +1,12 @@
+<form #form="ngForm" (ngSubmit)="submitForm(form)" class="searchbar">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    name="searchTerm"
+    placeholder="Buscar canción por nombre"
+    required
+  />
+  <button type="submit">
+    <span nz-icon nzType="search" nzTheme="outline"></span>
+  </button>
+</form>

@@ -1,10 +1,10 @@
 <section class="container">
-    <form #form="ngForm" (ngSubmit)="searchSongs(form)" >
-        <input type="text" [(ngModel)]="searchTerm" name="searchTerm">
-        <button type="submit">Buscar
-        </button>
-    </form>
+    <app-searcher
+    (onSearch)="searchSongs($event)"
+    >
+    </app-searcher>
     <hr />
+    <nz-spin nzSimple nzSize="large" *ngIf="isLoading"></nz-spin>
     <div class="container-top">
       <div class="container-card" *ngFor="let song of top5Songs">
         <app-song-card [songData]="song">
@@ -12,4 +12,3 @@
       </div>
     </div>
   </section>
-  
