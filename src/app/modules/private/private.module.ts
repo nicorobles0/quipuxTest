@@ -6,6 +6,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { PrivateRoutingModule } from './private-routing.module';
 
+import { SongPipe } from './my-music/pipes/song.pipe';
+
 @NgModule({
   declarations: [
     PrivateLayoutComponent
@@ -15,7 +17,7 @@ import { PrivateRoutingModule } from './private-routing.module';
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    PrivateRoutingModule
+    PrivateRoutingModule,
   ]
 })
 export class PrivateModule { }

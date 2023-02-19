@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-frame" [innerHTML]="songData.url! | songIframe ">
+    </div>
+    <div class="card-info">
+        <h3> {{ songData.name }} </h3>
+        <div>
+            <span nz-icon nzType="play-circle" nzTheme="outline"></span>
+            <h4> 
+                {{ songData.duration! | songTime }}    
+            </h4>
+        </div>
+    </div>
+</div>

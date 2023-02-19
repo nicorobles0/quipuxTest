@@ -1,1 +1,10 @@
-<p>index-page works!</p>
+<section class="container">
+  <h2>Top 5 Musica del momento</h2>
+  <hr />
+  <div class="container-top">
+    <div class="container-card" *ngFor="let song of top5Songs">
+      <app-song-card [songData]="song">
+      </app-song-card>
+    </div>
+  </div>
+</section>
