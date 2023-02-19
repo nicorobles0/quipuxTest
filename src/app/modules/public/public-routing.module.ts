@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { IndexComponent } from './login/pages/pages/index/index.component';
-
 const routes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    loadChildren: () => import('./login/login.module').then((m) => m.LoginModule)
   }
 ]
 

@@ -1,0 +1,40 @@
+<section class="container">
+  <div class="img">
+    <img src="/assets/bg/login.jpg" alt="Imagen Login" />
+  </div>
+  <div class="loginContent">
+    <form
+      class="form"
+      (ngSubmit)="login()"
+      [formGroup]="loginForm"
+      autocomplete="off"
+    >
+      <div class="titleContainer">
+        <h1>Quipix Prueba Frontend</h1>
+        <h2>Hola!</h2>
+        <p>Ingresa tus datos para iniciar...</p>
+      </div>
+      <div class="loginInnerContent">
+        <div class="inputDiv">
+          <input
+            placeholder="Correo"
+            type="text"
+            class="input"
+            formControlName="email"
+          />
+        </div>
+        <div class="inputDiv">
+          <input
+            placeholder="Contraseña"
+            name="password"
+            type="password"
+            class="input"
+            formControlName="password"
+          />
+        </div>
+      </div>
+      <p *ngIf="isFormError" class="err">{{ errorMessage }}</p>
+      <input type="submit" class="btn" value="Login" />
+    </form>
+  </div>
+</section>

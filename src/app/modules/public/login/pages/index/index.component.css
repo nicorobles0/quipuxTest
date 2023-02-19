@@ -99,7 +99,7 @@
   }
   .err{
     color: var(--main-color-error);
-    font-size: 15px;
+    font-size: 12px;
   }
   @media screen and (max-width: 1050px) {
     .container {

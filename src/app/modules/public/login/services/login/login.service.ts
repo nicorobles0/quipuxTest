@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 import { LoginInterface } from '../../interfaces/login.interface';
 
@@ -11,17 +12,17 @@ export class LoginService {
    * @param loginData
    * @returns
    */
-  login(loginData: LoginInterface): boolean {
+  login(loginData: LoginInterface): Observable<boolean> {
     if (
       loginData.email === 'user@quipux.com' &&
       loginData.password === '12345'
     ) {
       localStorage.setItem('user', JSON.stringify(loginData));
       localStorage.setItem('fakeJwt', '03efebfa-afd7-11ed-afa1-0242ac120002');
-      return true;
+      return of(true);
     }
     this.clearLogin();
-    return false;
+    return of(false);
   }
   /**
    * Funcion para Elimnar variables locales de Login
