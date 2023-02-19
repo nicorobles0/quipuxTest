@@ -10,7 +10,10 @@
 /node_modules
 npm-debug.log
 yarn-error.log
-
+# Angular
+/.angular
+# Vs code
+/.vscode
 # IDEs and editors
 .idea/
 .project
